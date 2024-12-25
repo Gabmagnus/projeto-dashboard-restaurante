@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import { Container } from './styles';
 
 
 export function MainView() {
+  const [count, setCount] = useState<number>(0)
+
   return (
+    
     <Container>
-      <h1>MainView</h1>
+      <span style={{color:"#fff", margin:"0 20px"}}>{count}</span>
+      <button onClick={() => {setCount(count + 1)}}>Aumentar um</button>
     </Container>
   );
 }
